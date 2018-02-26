@@ -1,0 +1,4 @@
+Flask==0.12.2
+flask_httpauth==3.2.3
+flask_migrate==2.1.1
+gevent==1.3a1
