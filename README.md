@@ -1,12 +1,5 @@
 # Attendance System
 
-## Contributors
-* Salman Shah
-* Aiman A.
-* Rashika C.
-* Aniket K.
-* Renu C.
-
 ## Setup
 
 ### Libraries Used
@@ -75,3 +68,14 @@ source venv/bin/activate
 ```
 python server.py
 ```
+
+## Contributors
+The Project is created and maintained by 
+* [Salman Shah](https://github.com/salman-bhai)
+* [Aiman Abdullah](https://github.com/aimananees)
+* [Rashika Chowlek](https://github.com/rashika)
+* [Renu Chowdhury](https://github.com/RenuChowdhury)
+* [Aniket Kumar](https://github.com/aniket)
+
+## Documentation
+Kindly look at our Wiki to know more information about the Project Documentation.
