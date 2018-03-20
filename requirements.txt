@@ -1,5 +1,5 @@
-Flask_Migrate==2.1.1
 gevent==1.2.2
-Flask==0.12.2
 Flask_HTTPAuth==3.2.3
+Flask_Migrate==2.1.1
+Flask==0.12.2
 face_recognition==1.2.1

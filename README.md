@@ -2,6 +2,8 @@
 
 ## Setup
 
+- Make sure you have the client code as well in a separate repository!
+
 ### Libraries Used
 * gevent
 * Flask_HTTPAuth

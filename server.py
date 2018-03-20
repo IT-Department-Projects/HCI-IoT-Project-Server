@@ -9,7 +9,7 @@ Argument takes in image with POST Key as 'file'
 Returns JSON of 'face_exists' and 'number_of_faces'
 """
 @app.route('/image_detection', methods=['GET', 'POST'])
-def upload_image():
+def image_detection():
     # Check if a valid image file was uploaded
     if request.method == 'POST':
         if 'file' not in request.files:
@@ -29,6 +29,38 @@ def upload_image():
     <!doctype html>
     <title>Have you uploaded a picture yet?</title>
     <h1>Upload a picture and see the number of people in the picture!</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="submit" value="Upload">
+    </form>
+    '''
+
+"""
+REST API Call to recognise images in a particular picture
+Argument takes in image with POST Key as 'file'
+Returns JSON of 'face_exists' and 'number_of_faces'
+"""
+@app.route('/image_recongnition', methods=['GET', 'POST'])
+def image_recognition():
+    # Check if a valid image file was uploaded
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            return redirect(request.url)
+
+        file = request.files['file']
+
+        if file.filename == '':
+            return redirect(request.url)
+
+        if file and allowed_file(file.filename):
+            # The image file seems valid! Detect faces and return the result.
+            return recognise_faces_in_image(file)
+
+    # If no valid image file was uploaded, show the file upload form:
+    return '''
+    <!doctype html>
+    <title>Have you uploaded a picture yet?</title>
+    <h1>Upload a picture and see the who all are the people in the picture!</h1>
     <form method="POST" enctype="multipart/form-data">
       <input type="file" name="file">
       <input type="submit" value="Upload">

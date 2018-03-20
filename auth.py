@@ -1,7 +1,7 @@
 from imports import *
 
 # Allowed Extensions of images uploaded to the server
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'JPG'}
 
 
 # Flask Variables
@@ -23,7 +23,8 @@ users = {
     "aiman": "abdullah",
     "salman": "shah",
     "rashika": "chowlek",
-    "aniket": "kumar"
+    "aniket": "kumar",
+    "renu": "chowdhary"
 }
 
 
@@ -31,8 +32,6 @@ users = {
 Method to check for allowed filenames that are uploaded in the server
 Allowed Extensions include 'jpg', 'png', 'jpeg' and 'gif' 
 """
-
-
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
